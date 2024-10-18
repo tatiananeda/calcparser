@@ -2,28 +2,11 @@ package utils
 
 import (
 	"errors"
+	cu "github.com/tatiananeda/calculator/utils"
 	"golang.org/x/exp/slices"
 	"strconv"
 	"strings"
 )
-
-var operations = map[string]func(float64, float64) (float64, error){
-	"+": func(x, y float64) (float64, error) {
-		return x + y, nil
-	},
-	"-": func(x, y float64) (float64, error) {
-		return x - y, nil
-	},
-	"*": func(x, y float64) (float64, error) {
-		return x * y, nil
-	},
-	"/": func(x, y float64) (float64, error) {
-		if y == 0 {
-			return 0, errors.New("Can't divide by 0")
-		}
-		return x / y, nil
-	},
-}
 
 var operationsByPrecedence = [2][2]string{
 	{"*", "/"},
@@ -46,11 +29,11 @@ func processOperations(input []string, ops []string) ([]string, error) {
 				return nil, err
 			}
 
-			if operations[item] == nil {
+			if cu.Operations[item] == nil {
 				return nil, err
 			}
 
-			res, err := operations[item](left, right)
+			res, err := cu.Operations[item](left, right)
 
 			if err != nil {
 				return nil, err

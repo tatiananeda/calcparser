@@ -1,2 +1,4 @@
+github.com/tatiananeda/calculator v0.0.0-20241018131041-9dfa14dd0018 h1:TMNMIO08+8b/4jE+2CuGKBGQzbAX5ZNeyr72xL4ILsA=
+github.com/tatiananeda/calculator v0.0.0-20241018131041-9dfa14dd0018/go.mod h1:3VwX0NPuwZvunumzxvBetkfY4wNjB0IrE1n8fQ5f9uU=
 golang.org/x/exp v0.0.0-20241009180824-f66d83c29e7c h1:7dEasQXItcW1xKJ2+gg5VOiBnqWrJc+rq0DPKyvvdbY=
 golang.org/x/exp v0.0.0-20241009180824-f66d83c29e7c/go.mod h1:NQtJDoLvd6faHhE7m4T/1IY708gDefGGjR/iUW8yQQ8=
